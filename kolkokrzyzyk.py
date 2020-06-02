@@ -4,9 +4,9 @@ import random
 from pygame.locals import * 
 
 pygame.init()
+pygame.display.set_caption("Kółko i krzyżyk")
+OKNOGRY = pygame.display.set_mode((600, 600))
 
-OKNOGRY = pygame.display.set_mode((600, 600), 0, 32)
-pygame.display.set_caption('Kółko i krzyżyk')
 
 POLE_GRY = [0, 0, 0,
             0, 0, 0,
@@ -190,8 +190,8 @@ def gg():
     while True:
         for event in pygame.event.get():
             if event.type == QUIT:
-                pygame.quit()
-                sys.exit()
+                #pygame.quit()
+                sys.exit(0)
 
             if WYGRANA is False:
                 if RUCH == 1:
@@ -224,8 +224,8 @@ def gk():
     while True:
         for event in pygame.event.get():
             if event.type == QUIT:
-                pygame.quit()
-                sys.exit()
+                #pygame.quit()
+                sys.exit(0)
 
             if WYGRANA is False:
                 if RUCH == 1:
